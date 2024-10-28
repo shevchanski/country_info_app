@@ -16,6 +16,18 @@ class CountryController {
       next(err);
     }
   }
+
+  static async getCountryInfo(req: Request, res: Response, next: NextFunction) {
+    try {
+      const { countryCode } = req.params;
+
+      const country_info = await CountryService.getCountryInfo(countryCode);
+
+      res.status(RES_STATUS.OK).json({ country_info });
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 export default CountryController;
