@@ -23,7 +23,7 @@ export default function CountriesPage() {
 
   return (
     <>
-      <div className="grid grid-cols-10 gap-2 p-2 shadow-gray-400">
+      <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-2 p-2 shadow-gray-400">
         {countries.map((country, i) => (
           <CountryCard key={i} data={country} />
         ))}
