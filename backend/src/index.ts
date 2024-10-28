@@ -7,10 +7,14 @@ dotenv.config();
 
 const app = express();
 
+// global middlewares
+app.use(express.json()); // mdlwr which parses json
+
 app.get("/ping", (req: Request, res: Response) => {
   res.status(200).send("pong");
 });
 
+// routers
 app.use("/countries", CountryRouter);
 
 app.listen(APP_CONFIG.PORT, () => {
