@@ -53,7 +53,7 @@ class CountryService {
     ]);
 
     return {
-      list_of_borders: countryData.borders,
+      ...countryData,
       population_data: populData.data.data.populationCounts,
       flag_url: flagData.data.data.flag,
     };
