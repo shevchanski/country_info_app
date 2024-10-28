@@ -1,10 +1,9 @@
-import { Request, Response, Router } from "express";
+import { Router } from "express";
+import CountryController from "./country.controller";
 
 const CountryRouter = Router();
 
 // get all countries
-CountryRouter.get("/", (req: Request, res: Response) => {
-  res.status(200).send("All Countries");
-});
+CountryRouter.get("/", CountryController.getAllCountries);
 
 export default CountryRouter;
