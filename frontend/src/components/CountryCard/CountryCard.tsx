@@ -11,7 +11,7 @@ export default function CountryCard({ data }: Props) {
   return (
     <Link
       to={`/countries/${countryCode}`}
-      className="flex justify-between p-5  border-gray-200 rounded-lg border-2 hover:scale-105 duration-75"
+      className="flex justify-between p-5  shadow-md rounded-lg max-w-xs items-start border border-gray-200 transform transition-transform hover:scale-105"
     >
       <h4 className="text-sm font-semibold leading-6 text-gray-900">{name}</h4>
       <p className="text-sm leading-6 text-gray-900">{countryCode}</p>
