@@ -7,7 +7,7 @@ export interface CountriesResponse {
   countries: ICountry[];
 }
 
-interface PopulationData {
+export interface PopulationData {
   year: number;
   value: number;
 }
