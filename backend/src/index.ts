@@ -1,9 +1,8 @@
-import express, { Response, Request } from "express";
-import dotenv from "dotenv";
-import APP_CONFIG from "./config/app.config";
-import CountryRouter from "./api/country/country.router";
+import "dotenv/config";
+import express, { Request, Response } from "express";
 
-dotenv.config();
+import CountryRouter from "./api/country/country.router";
+import APP_CONFIG from "./config/app.config";
 
 const app = express();
 
