@@ -36,8 +36,7 @@ export interface FlagResponse {
   iso3: string;
 }
 
-export interface ICountryInfo {
-  list_of_borders: string[];
+export interface ICountryInfo extends NagerCountryInfo {
   population_data: PopulationData[];
   flag_url: string;
 }
